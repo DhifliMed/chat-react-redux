@@ -1,4 +1,5 @@
 import {ADD_MESSAGE, MESSAGE_RECEIVED} from "./ActionTypes";
+
 const initialState = []
 const messages = (state = initialState , action) => {
     switch (action.type) {

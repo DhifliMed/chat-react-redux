@@ -32,24 +32,26 @@ const Chat = (props) => {
 
     }
     return (
-        <div className={closed?" chat-container ":"chat-container shown"}>
+        <div className={closed ? " chat-container " : "chat-container shown"}>
 
-            {closed ? (<button className={"btn btn-light btn-outline-primary"} onClick={handleClosed}>show chat</button>) : (<>
+            {closed ? (
+                <button className="btn btn-light btn-outline-primary" onClick={handleClosed}>show chat</button>) : (<>
                 <div onClick={handleClosed}><Header username={props.username}/></div>
                 <Messagelist messages={messages} username={props.username}/>
-                <div className={"row"}>
-                    <div className={"w-70"}>
+                <div className="row">
+                    <div className="w-70">
                         <input value={message.content} onKeyPress={event => {
                             if (event.key === 'Enter') {
                                 sendMsg()
                             }
-                        }} className={"form-control messageinput"}
+                        }} className="form-control messageinput"
                                onChange={updateMessage}/>
                     </div>
-                    <div className={"w-30"}>
+                    <div className="w-30">
                         <button onClick={sendMsg}
 
-                                className={"btn btn-light btn-outline-primary w-100"}>send</button>
+                                className="btn btn-light btn-outline-primary w-100">send
+                        </button>
                     </div>
                 </div>
             </>)}

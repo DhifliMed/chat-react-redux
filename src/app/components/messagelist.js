@@ -22,9 +22,8 @@ const Messagelist = (props) => {
                 flexDirection: 'column-reverse',
             }}
         >
-            {/*Put the scroll bar always on the bottom*/}
             <InfiniteScroll
-                dataLength={props.messages.reverse().slice(0,  shownlength)}
+                dataLength={props.messages.reverse().slice(0, shownlength)}
                 next={fetchMoreData}
                 style={{
                     display: 'flex',
@@ -37,13 +36,15 @@ const Messagelist = (props) => {
                 pullDownToRefreshThreshold={50}
                 height={350}
             >
-                {props.messages.sort((a,b)=>(a.msgTime > b.msgTime ?-1:a.msgTime <b.msgTime?1:0)).slice(0,  shownlength).map((message, index) => (
+                {props.messages.sort((a, b) => (a.msgTime > b.msgTime ? -1 : a.msgTime < b.msgTime ? 1 : 0)).slice(0, shownlength).map((message, index) => (
                     <div key={index}>
                         {
-                            message.authorName.localeCompare(props.username)===0?
-                                (<><img src={"/me.png"} className={"avatar"} alt={"me"}/>
-                                <span className={"mymsg"}>{message.content}</span> </>):(
-                                    <> <span className={"othermsg"}>{message.content}</span> <img src={"/other.png"} className={"avatar"} alt={message.authorName}/></>)
+                            message.authorName.localeCompare(props.username) === 0 ?
+                                (<><img src="/me.png" className="avatar" alt="me"/>{message.authorName}
+                                    <span className="mymsg">{message.content}</span> </>) : (
+                                    <> <span className="othermsg">{message.content}</span> <img src="/other.png"
+                                                                                                className="avatar"
+                                                                                                alt={message.authorName}/>{message.authorName}</>)
                         }
                     </div>
                 ))}

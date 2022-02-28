@@ -1,11 +1,10 @@
 import chat from '../features/Reducers'
-import { createStore, applyMiddleware } from 'redux'
-import { createStateSyncMiddleware, initStateWithPrevTab } from 'redux-state-sync'
+import {applyMiddleware, createStore} from 'redux'
+import {createStateSyncMiddleware, initStateWithPrevTab} from 'redux-state-sync'
 
 const middlewares = [
-  createStateSyncMiddleware(),
+    createStateSyncMiddleware(),
 ]
-
 
 const saveToLocalStorage = state => {
     try {

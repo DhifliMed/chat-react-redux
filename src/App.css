@@ -1,7 +1,8 @@
-.logo{
+.logo {
     width: 100%;
 }
-.logo img{
+
+.logo img {
     width: 250px;
     max-width: 50%;
     margin: 0 auto;
@@ -26,6 +27,7 @@
     opacity: .8;
     overflow: hidden;
 }
+
 .chat-container.shown {
     position: fixed;
     max-width: 350px;
@@ -60,15 +62,21 @@
     width: 100%;
 }
 
-.messagelist ul li{
+.messagelist .infinite-scroll-component {
+    padding: 0 20px;
+}
+
+.messagelist ul li {
     display: block;
 }
-.avatar{
+
+.avatar {
     height: 50px;
     width: 50px;
     display: inline-block;
 }
-.mymsg{
+
+.mymsg {
     margin: 10px auto;
     text-align: left;
     width: calc(100% - 60px);
@@ -80,7 +88,8 @@
     border-radius: 3px;
     overflow-wrap: break-word;
 }
-.othermsg{
+
+.othermsg {
     margin: 10px auto;
     text-align: right;
     width: calc(100% - 60px);
@@ -92,6 +101,7 @@
     border-radius: 3px;
     overflow-wrap: anywhere;
 }
+
 .chat-container .chat-header {
     width: 100%;
     background: #88d8;
@@ -102,16 +112,21 @@
     align-items: center;
     flex-direction: column;
     cursor: pointer;
+    justify-content: space-evenly;
 }
+
 .chat-container .chat-header:hover {
     background: #88d;
 }
 
-.w-30{
+.w-30 {
     width: 30%;
     padding: 0;
 }
-.w-70{
+
+.w-70 {
     width: 70%;
     padding: 0;
+    padding-left: 13px;
+
 }
