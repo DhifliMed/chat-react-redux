@@ -1,0 +1,117 @@
+.logo{
+    width: 100%;
+}
+.logo img{
+    width: 250px;
+    max-width: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.chat-container {
+    position: fixed;
+    max-width: 100px;
+    min-width: 100px;
+    max-height: 50px;
+    min-height: 50px;
+    background: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: stretch;
+    bottom: 10px;
+    right: 10px;
+    opacity: .8;
+    overflow: hidden;
+}
+.chat-container.shown {
+    position: fixed;
+    max-width: 350px;
+    min-width: 350px;
+    max-height: 450px;
+    min-height: 450px;
+    background: #727;
+    border: 1px solid #ccc7;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: stretch;
+    bottom: 10px;
+    right: 10px;
+    box-shadow: -3px 3px 10px #ccc7;
+    opacity: .8;
+    overflow: hidden;
+}
+
+.chat-container .messageinput {
+    margin-top: auto;
+    border: 1px solid #222;
+    max-height: 40px;
+}
+
+.messagelist {
+    background: #ddd;
+    flex: 1;
+    width: 100%;
+}
+
+.messagelist ul li{
+    display: block;
+}
+.avatar{
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+}
+.mymsg{
+    margin: 10px auto;
+    text-align: left;
+    width: calc(100% - 60px);
+    display: inline-block;
+    padding: 5px 10px;
+    background: darkblue;
+    color: #ddd;
+    font-size: 14px;
+    border-radius: 3px;
+    overflow-wrap: break-word;
+}
+.othermsg{
+    margin: 10px auto;
+    text-align: right;
+    width: calc(100% - 60px);
+    display: inline-block;
+    padding: 5px 10px;
+    background: silver;
+    color: #222;
+    font-size: 14px;
+    border-radius: 3px;
+    overflow-wrap: anywhere;
+}
+.chat-container .chat-header {
+    width: 100%;
+    background: #88d8;
+    height: 40px;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.chat-container .chat-header:hover {
+    background: #88d;
+}
+
+.w-30{
+    width: 30%;
+    padding: 0;
+}
+.w-70{
+    width: 70%;
+    padding: 0;
+}
